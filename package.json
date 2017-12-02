@@ -1,0 +1,19 @@
+{
+  "name": "hackinsantos",
+  "version": "1.0.0",
+  "description": "Desafio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HackInSantos/1-Hack-in-Santos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HackInSantos/1-Hack-in-Santos/issues"
+  },
+  "homepage": "https://github.com/HackInSantos/1-Hack-in-Santos#readme"
+}
