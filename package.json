@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/HackInSantos/1-Hack-in-Santos/issues"
   },
-  "homepage": "https://github.com/HackInSantos/1-Hack-in-Santos#readme"
+  "homepage": "https://github.com/HackInSantos/1-Hack-in-Santos#readme",
+  "dependencies": {
+    "cron": "^1.3.0"
+  }
 }
