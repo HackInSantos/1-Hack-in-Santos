@@ -59,3 +59,6 @@ typings/
 
 # Webstorm
 .idea
+
+# This directory is workspace specific
+.vagrant/*
