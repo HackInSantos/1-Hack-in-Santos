@@ -1,2 +1,9 @@
 # 1-Hack-in-Santos
 Desafio 
+
+# Environment Variables
+
+DATABASE_URL 
+DATABASE_USER
+DATABASE_PASSWORD
+DATABASE_NAME
