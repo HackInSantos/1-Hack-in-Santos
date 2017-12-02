@@ -7,9 +7,9 @@ const Twitter = require('./twitter')(options);
 async function send(message){
   await Twitter.send({
     message: message,
-    key: process.env.PORT,
-    secret: process.env.PORT,
-    token: process.env.PORT,
-    token_secret: process.env.PORT
+    key: process.env.KEY,
+    secret: process.env.SECRET,
+    token: process.env.TOKEN,
+    token_secret: process.env.TOKEN_SECRET
   });
 };
