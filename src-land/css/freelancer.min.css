@@ -44,3 +44,13 @@ section {
         line-height: 4rem;
     }
 }
+
+.address{
+    border: 1px solid #ddd;
+    padding: 9px;
+    text-align: center;
+}
+
+.text-center{
+    text-align: center;
+}
