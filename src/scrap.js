@@ -50,9 +50,9 @@ let count = 0;
         }
       })
       .error(console.log)
-      // .debug(console.log)
-      // .log(console.log)
-      ;
+    // .debug(console.log)
+    // .log(console.log)
+    ;
   } finally {
     console.log('Scrap Finished');
     client.release();
@@ -62,20 +62,20 @@ let count = 0;
     if (count == 2)
       throw Error('FUCK THE FUCK');
     count++;
-    data.id = crypto.createHash('md5').update(data.name).digest("hex");
+    data.aldermen_id = crypto.createHash('md5').update(data.name).digest("hex");
     let query = {
       text: `
       insert into aldermen (id, name) values ($1, $2) 
       --ON CONFLICT DO NOTHING
       `,
       values: [
-        data.id
+        data.aldermen_id
         , data.name
       ]
     };
     try {
       await client.query(query);
-    } catch(err){
+    } catch (err) {
       // err
       console.log('[INSERT ALDERMAN]', err);
     }
@@ -85,24 +85,24 @@ let count = 0;
     // Save Project
     query = {
       text: `
-      insert into projects (id, date, local, ementa, details, aldermen_id) 
-      values ($1, $2, $3, $4, $5, $6) 
-      --ON CONFLICT DO NOTHING
+      insert into projects (id, hash_id, date, local, ementa, details, aldermen_id) 
+      values ($1, $2, $3, $4, $5, $6, $7)
       `,
       values: [
-        data.projectId
+        data.id
+        , data.projectId
         , data.date
         , data.local
         , data.ementa
         , JSON.stringify(data.details)
-        , data.id
+        , data.aldermen_id
       ]
     };
     try {
       await client.query(query);
-    } catch(err){
+    } catch (err) {
       // err
-      console.log('[INSERT PROJECT]',JSON.stringify(data.details, null, 2),err);
+      console.log('[INSERT PROJECT]', JSON.stringify(data.details, null, 2), err);
     }
   }
 })();
