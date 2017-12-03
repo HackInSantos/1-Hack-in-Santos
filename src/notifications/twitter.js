@@ -8,7 +8,7 @@ module.exports = function (options) {
   }
 };
 
-function send(options) {
+function send(options) { // aloka
 	var T = new Twit({
 	  consumer_key:         _options.key,
 	  consumer_secret:      _options.secret,
