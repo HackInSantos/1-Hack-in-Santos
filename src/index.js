@@ -1,6 +1,6 @@
 const DB = require('db');
 
 // Test Notification
-const Notification = require('notifications')({});
+const Notification = require('./notifications')();
 
-Notification.send('Badaboom will show to the people the truth');
+Notification.send('Tô em Santos maluco');

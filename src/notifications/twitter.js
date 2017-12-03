@@ -1,8 +1,8 @@
-var Twit = require('twit')
+const Twit = require('twit');
 
-const options;
+var _options;
 module.exports = function (options) {
-  options = options || {};
+  _options = options || {};
   return {
     send: send
   }
@@ -10,10 +10,10 @@ module.exports = function (options) {
 
 function send(options) {
 	var T = new Twit({
-	  consumer_key:         options.key,
-	  consumer_secret:      options.secret,
-	  access_token:         options.token,
-	  access_token_secret:  options.token_secret
+	  consumer_key:         _options.key,
+	  consumer_secret:      _options.secret,
+	  access_token:         _options.token,
+	  access_token_secret:  _options.token_secret
 	})
 
 	T.post('statuses/update', { status: options.message }, function(err, data, response) {
