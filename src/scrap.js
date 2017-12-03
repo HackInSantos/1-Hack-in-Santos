@@ -6,9 +6,10 @@ let url = 'http://legislativo.camarasantos.sp.gov.br/dispositivo/ideCustom/legis
   '&busca=1&limite=2#Busca';
 // $('.table tbody').find('tr').eq(2).find('td').eq(1).html();
 
-
+let count = 0;
 osmosis
   .get(url)
+  .paginate('a:starts-with("Próximo")')
   .find('//table')
   .set('id', 'tbody//tr[1]/td[3]')
   .set('date', 'tbody//tr[2]/td[2]')
@@ -28,9 +29,11 @@ osmosis
     ]
   })
   .data(function (listing) {
+    count++;
+    console.log('count', count);
     // do something with listing data
-    listing = listing;
-    console.log(JSON.stringify(listing, null, 2));
+    // listing = listing;
+    // console.log(JSON.stringify(listing, null, 2));
   })
   .error(console.log)
   .debug(console.log)
