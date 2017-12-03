@@ -67,7 +67,7 @@
       </div>
 
       <div class="text-center mt-4" style="display:inline">
-        <a class="btn btn-primary btn-xl" href="#" data-toggle="modal" data-target="#myModal">
+        <a class="btn btn-primary btn-xl" onclick="gerarWallet()"href="#" data-toggle="modal" data-target="#myModal">
           <i class="fa fa-thumbs-up mr-2"></i>
           Apoie
         </a>
@@ -100,30 +100,33 @@
 
               <!-- Modal body -->
               <div class="modal-body">
-                <center>BTC Wallet Endereço:</center></br></br>
+                <!-- <center>BTC Wallet Endereço:</center></br></br> -->
                 <!-- <img style="display:block; margin:0 auto" src="img/btc.png"> -->
-                <div style="font-size:16px;margin:0 auto;width:300px" class="blockchain-btn"
-                data-address="1CLRxSBMUiyaXN7emSGe5zrr6rtacKTYu"
-                data-shared="false">
-                  <div class="blockchain stage-begin">
-                    <img src="https://blockchain.info/Resources/buttons/donate_64.png"/>
-                  </div>
-                  <div class="blockchain stage-loading" style="text-align:center">
-                      <img src="https://blockchain.info/Resources/loading-large.gif"/>
-                  </div>
-                  <div class="blockchain stage-ready">
-                        <p align="center">Please Donate To Bitcoin Address: <b>[[address]]</b></p>
-                        <p align="center" class="qr-code"></p>
-                  </div>
-                  <div class="blockchain stage-paid">
-                        Donation of <b>[[value]] BTC</b> Received. Thank You.
-                  </div>
-                  <div class="blockchain stage-error">
-                      <font color="red">[[error]]</font>
-                  </div>
-                  </div>
+              <!-- begin -->
+              <div style="font-size:16px;margin:0 auto;width:300px" class="blockchain-btn"
+              data-address="1CLRxSBMUiyaXN7emSGe5zrr6rtacKTYu"
+              data-shared="false">
+                <div class="blockchain stage-begin">
+                  <img src="https://blockchain.info/Resources/buttons/donate_64.png"/>
+                </div>
+                <div class="blockchain stage-loading" style="text-align:center">
+                    <img src="https://blockchain.info/Resources/loading-large.gif"/>
+                </div>
+                <div class="blockchain stage-ready">
+                      <p align="center">Please Donate To Bitcoin Address: <b>[[address]]</b></p>
+                      <p align="center" class="qr-code"></p>
+                </div>
+                <div class="blockchain stage-paid">
+                      Donation of <b>[[value]] BTC</b> Received. Thank You.
+                </div>
+                <div class="blockchain stage-error">
+                    <font color="red">[[error]]</font>
+                </div>
+              </div>
+
+              <!-- end -->
                 <!-- end -->
-                <p class="address">1CLRxSBMUiyaXN7emSGe5zrr6rtacKTYu</p>
+                <!-- <p class="address">1CLRxSBMUiyaXN7emSGe5zrr6rtacKTYu</p> -->
               </div>
 
               <!-- Modal footer -->
@@ -265,6 +268,15 @@
     <script type="text/javascript" src="https://blockchain.info/Resources/js/pay-now-button.js"></script>
     
     <script>
+
+    function gerarWallet(){
+      //start blockchain
+      $(".blockchain-btn").click();
+      console.log('Obrigado pela colaboração');
+      console.log('Use o QR CODE por segurança');
+      console.log('1CLRxSBMUiyaXN7emSGe5zrr6rtacKTYu');
+    }
+
     // Select all links with hashes
     $('a[href*="#"]')
       // Remove links that don't actually link to anything
