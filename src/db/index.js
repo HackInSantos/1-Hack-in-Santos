@@ -2,8 +2,8 @@ const {Pool} = require('pg');
 const config = {
   host: process.env['DATABASE_URL'] || 'localhost',
   user: process.env['DATABASE_USER'] || 'postgres',
-  password: process.env['DATABASE_PASSWORD'] || 'postgres',
-  database: process.env['DATABASE_NAME'] || 'hacksantos',
+  password: process.env['DATABASE_PASSWORD'] || 'pass',
+  database: process.env['DATABASE_NAME'] || 'postgres',
   max: 20,
   idleTimeoutMillis: 30000,
   connectionTimeoutMillis: 2000,
